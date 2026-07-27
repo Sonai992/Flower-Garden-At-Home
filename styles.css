@@ -22,7 +22,7 @@ nav{
 	
 	/* position: sticky; */
 	position: sticky;
-    display: flex;
+    display: flex;  
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -92,37 +92,60 @@ body{
     font-size: larger;
     font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-.top_summer{
+ /* --- Base Layout Fixes for Cards --- */
+
+/* Flexible container for flower cards */
+.top_summer {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    margin: 30px 0px;
-
+    flex-wrap: wrap;             /* Allows cards to wrap on smaller screens */
+    justify-content: center;     /* Centers cards nicely */
+    /* align-items: stretch;        Makes all cards in a row equal height */
+    gap: 20px;                   /* Clean spacing between cards */
+    margin: 30px auto;
+    padding: 0 15px;
+    max-width: 1200px;
 }
-.S_flowers{
+
+/* Responsive card containers */
+.S_flowers {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
     border: 2px solid #8baf83;
     border-radius: 1rem;
-    width: fit-content;
-    margin-left: 20px;
-    padding: 10px;
-    padding-bottom: 35px;
+    width: calc(33.333% - 20px); /* 3 cards per row on desktop */
+    min-width: 260px;            /* Keeps cards from shrinking too small */
+    margin-left: 0;              /* Removed hardcoded left margin */
+    padding: 15px;
     background-color: white;
-
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.S_flowers:hover{
+
+.S_flowers:hover {
     box-shadow: 0 16px 28px -8px rgba(98, 123, 93, 0.684);
+    transform: translateY(-5px); /* Smooth slight lift on hover */
 }
-.ful{
-    width: 250px;
-    border-radius: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
 
+/* Fully responsive card images */
+.ful {
+    width: 100%;
+    max-width: 250px;
+    height: 250px;
+    object-fit: cover;           /*Ensures images scale without distortion*/
+    border-radius: 1rem;
+    margin-bottom: 12px;
+}
+
+/* Card typography adjustments */
+.S_flowers h3 {
+    margin-bottom: 8px;
+    color: #2e4e2d;
+}
+
+.S_flowers p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: #4a4a4a;
 }
