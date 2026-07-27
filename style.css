@@ -1,69 +1,54 @@
 *{
-	padding: 0;
-	margin:0;
-	box-sizing: border-box;
-	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-header{
-	position: relative;
-	background-color: #8baf83;
-    padding: 1%;
-	text-align:center;
-	display:flex;
-	flex-direction:column;
-	justify-content:center;
-	align-items:center;
-	color: #ffffff;
-	font-size: larger;
-	border-bottom:  2px solid green;
-	box-shadow: 0 16px 28px -8px rgba(139, 175, 131, 0.5 );
-}
-nav{
-	
-	/* position: sticky; */
-	position: sticky;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-	padding: 10px;
-	margin-top: 10px;
-	margin-bottom: 2.5%;
-	width: 100%;
-	background-color: rgba(181, 255, 181, 0.403);
-	border:2px solid black;
-	border-radius:10px;
-	backdrop-filter:blur(5px);
-	font-weight:bolder;
-	font-size: larger;
-}
-
-nav a{
-
-
- 	display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-	color: rgb(97, 123, 97);
-    border-radius: 10px; 
-    height: 50px;
-    width: 100px;
-    margin: 10px;   
-    text-align: center;
-    text-decoration:none;
-
-}
-nav a:hover{
-	background-color: #ffffffaa;
-	transition-duration: 0.3s;
-	transition-delay: 85ms;
-	color: black;
-	box-shadow: 0 16px 28px -8px rgba(98, 123, 93, 0.684);
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 body{
-	background-color: #f0f5ef;
+    background-image: url(assets/IMG-20260408-WA0038.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
-.title .Subtitle{
-	padding: 25px;
+
+header{
+
+    background-color: rgba(50, 50, 50, 0.514);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-wrap: wrap;
+}
+.hero1{
+   
+    font-weight:  700;
+    font-size:  8vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+    width: 80px;
+    height: 35px;
+    font-weight: 700;
+    border-radius: 5px;
+    border-color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}   
+button:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    border: 1px solid #ffffff;
 }
