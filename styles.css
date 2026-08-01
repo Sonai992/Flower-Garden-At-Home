@@ -4,63 +4,87 @@
 	box-sizing: border-box;
 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
+/* ==========================
+        APPLE NAVBAR
+========================== */
+
 header{
-	position: relative;
-	background-color: #8baf83;
-    padding: 1%;
-	text-align:center;
-	display:flex;
-	flex-direction:column;
-	justify-content:center;
-	align-items:center;
-	color: #ffffff;
-	font-size: larger;
-	border-bottom:  2px solid green;
-	box-shadow: 0 16px 28px -8px rgba(139, 175, 131, 0.55 );
-}
-nav{
-	
-	/* position: sticky; */
-	position: sticky;
-    display: flex;  
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-	padding: 10px;
-	margin-top: 10px;
-	margin-bottom: 2.5%;
-	width: 100%;
-	background-color: rgba(181, 255, 181, 0.403);
-	border:2px solid black;
-	border-radius:10px;
-	backdrop-filter:blur(5px);
-	font-weight:bolder;
-	font-size: larger;
-}
-
-nav a{
-
-
- 	display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-	color: rgb(97, 123, 97);
-    border-radius: 10px; 
-    height: 50px;
-    width: 100px;
-    margin: 10px;   
+    /* background: linear-gradient(135deg,#7FB77E,#B1D7B4);
+    padding: 25px;
+    text-align: center; */
+      /* padding: 30px 20px; */
+    background: linear-gradient(135deg,#7FB77E,#B1D7B4);
     text-align: center;
-    text-decoration:none;
-    transition: transform 0.5s ease, box-shadow 0.5s ease-out;
+    padding: 30px 20px 100px; /* Navbar-এর জন্য নিচে জায়গা */
+    position: relative
+
 }
-nav a:hover{
-	background-color: #ffffffaa;
-	transition-duration: 0.3s;
-	transition-delay: 85ms;
-	color: black;
-	box-shadow: 0 16px 28px -8px rgba(98, 123, 93, 0.684);
-    transform: translateY(-5px);
+
+header h1 {
+    color:#fff;
+    font-size:3rem;
+    margin-bottom:8px;
+}
+
+header h3{
+    color:#f5f5f5;
+    margin-bottom:30px;
+    font-weight:500;
+}
+
+/* Navbar */
+
+.navbar{
+/* ==================== Glassomorphisom efect in nav Bar ============================= */
+
+    width: 100%;
+    backdrop-filter: blur(10px);
+    width:95%;
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:18px;
+    flex-wrap:wrap;
+    padding:16px 25px;
+    background: rgba(255,255,255,.25);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,.3);
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.15);
+    transition: 0.4s;
+}
+
+/* Links */
+
+.navbar a{
+    text-decoration:none;
+    color:#234126;
+    font-size:18px;
+    font-weight:600;
+    padding:12px 24px;
+    border-radius:12px;
+    transition:.35s;
+}
+
+/* Hover */
+
+.navbar a:hover{
+    background:#ffffff;
+    color:#2E7D32;
+    transform:translateY(-3px);
+    box-shadow:0 8px 18px rgba(0,0,0,.15);
+}
+
+/* Active Page */
+
+.navbar a.active{
+    background:#2E7D32;
+    color:white;
+    box-shadow:0 8px 18px rgba(46,125,50,.35);
 }
 body{
 	background-color: #f0f5ef;
@@ -70,7 +94,7 @@ body{
 }
 .intro{
     position: relative;
-	background-image: url(assets/image_9a5fa6c8.png);
+	background-image: url(Garden_overvew/image_9a5fa6c8.png);
     background-size: auto;
     width: 100%;
     height:30em;
@@ -99,10 +123,10 @@ body{
 .top_floewers {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;             /* Allows cards to wrap on smaller screens */
-    justify-content: center;     /* Centers cards nicely */
-    align-items: stretch;     /*   Makes all cards in a row equal height */
-    gap: 20px;                   /* Clean spacing between cards */
+    flex-wrap: wrap;                /* Allows cards to wrap on smaller screens */
+    justify-content: center;        /* Centers cards nicely */
+    align-items: stretch;           /*akes all cards in a row equal height */
+    gap: 20px;                      /* Clean spacing between cards */
     margin: 30px auto;
     padding: 0 15px;
     max-width: 1200px;
@@ -117,7 +141,7 @@ body{
     border-radius: 1rem;
     width: calc(33.333% - 20px); /* 3 cards per row on desktop */
     min-width: 260px;            /* Keeps cards from shrinking too small */
-    margin-left: 0;              /* Removed hardcoded left margin */
+    margin-left: 0;             
     padding: 15px;
     background-color: white;
     text-align: center;

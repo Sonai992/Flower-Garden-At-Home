@@ -1,0 +1,39 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.header-H ,.header-P{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+.header-H{
+    font-size: 80px;
+    font-weight: 800;
+/* ================= 1st Font ============================= */
+
+    font-family: "Libertinus Math", system-ui;
+    font-weight: 600;
+    font-style: normal;
+    color: darkgreen;
+}
+.header-P{
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: green;
+}
+.Head-title{
+    /* font-family: "Arvo", serif;
+    font-weight: 800;
+    font-style: normal; */
+
+    font-family: "Slabo 27px", serif;
+    font-weight: 600;
+    font-style: normal;
+
+}
