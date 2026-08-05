@@ -159,9 +159,6 @@ body{
 
 /* ================= African Marigold ================= */
 
-.marigold::before{
-    background:#F59E0B;
-}
 
 .marigold h2{
     color:#D97706;
@@ -174,9 +171,7 @@ body{
 
 /* ================= Rain Lily ================= */
 
-.rain-lily::before{
-    background:#EC4899;
-}
+
 
 .rain-lily h2{
     color:#DB2777;
@@ -201,9 +196,7 @@ body{
 
 /* ================= Nayantara ================= */
 
-.nayantara::before{
-    background:#F43F5E;
-}
+
 
 .nayantara h2{
     color:#E11D48;
@@ -216,9 +209,6 @@ body{
 
 /* ================= Dopati ================= */
 
-.dopati::before{
-    background:#C2185B;
-}
 
 .dopati h2{
     color:#C2185B;
@@ -231,9 +221,7 @@ body{
 
 /* ================= Chrysanthemum ================= */
 
-.chrysanthemum::before{
-    background:#F59E0B;
-}
+
 
 .chrysanthemum h2{
     color:#EA580C;
@@ -335,8 +323,7 @@ body{
 
 @media (max-width:992px){
 
-    .flower-card,
-    .flower-card.reverse{
+    .flower-card,.flower-card.reverse{
         flex-direction:column;
         text-align:center;
         padding:35px;
