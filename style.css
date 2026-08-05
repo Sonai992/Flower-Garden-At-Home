@@ -75,6 +75,8 @@ header{
         display: flex;
         justify-content: center;
         align-items: center;
+        background-color: #ffffff;
+        color: rgb(18, 18, 17);
     }
     .Btn:hover{
         background-color: rgba(255, 255, 255, 0.2);
@@ -95,6 +97,8 @@ header{
         display: flex;
         justify-content: center;
         align-items: center;
+        background-color: #ffffff;
+        color: rgb(18, 18, 17);
     }
     .Btn:hover{
         background-color: rgba(255, 255, 255, 0.2);
@@ -103,9 +107,5 @@ header{
         text-decoration: none;
         transform: translateY(-5px);
         transition-duration: 0.5s;
-    }
-    .hero-p p{
-        font-size: 20px;
-        color: aqua;
     }
 }
