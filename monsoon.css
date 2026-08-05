@@ -146,7 +146,7 @@ body{
     margin-bottom:28px;
     padding-bottom:12px;
     border-bottom:3px solid;
-    transition:.35s;
+    
 }
 
 .flower-content p{
@@ -154,7 +154,6 @@ body{
     line-height:2.05;
     text-align:justify;
     letter-spacing:.3px;
-    transition:.35s;
 }
 
 /* ================= African Marigold ================= */
@@ -264,56 +263,34 @@ body{
     IMAGE BORDER
 ==========================================================*/
 
-.marigold img{
-    border:4px solid rgba(245,158,11,.15);
-}
-
-.rain-lily img{
-    border:4px solid rgba(236,72,153,.15);
-}
-
-.aparajita img{
-    border:4px solid rgba(59,130,246,.15);
-}
-
-.nayantara img{
-    border:4px solid rgba(244,63,94,.15);
-}
-
-.dopati img{
-    border:4px solid rgba(194,24,91,.15);
-}
-.chrysanthemum img{
-    border:4px solid rgba(245,158,11,.15);
-}
 /* African Marigold */
 .marigold img{
-    border:4px solid #F39C12;
+    border:3px solid #F39C12;
 }
 
 /* Rain Lily */
 .rain-lily img{
-    border:4px solid #EC4899;
+    border:3px solid #EC4899;
 }
 
 /* Aparajita */
 .aparajita img{
-    border:4px solid #2563EB;
+    border:3px solid #2563EB;
 }
 
 /* Nayantara */
 .nayantara img{
-    border:4px solid #E91E63;
+    border:3px solid #E91E63;
 }
 
 /* Dopati */
 .dopati img{
-    border:4px solid #C2185B;
+    border:3px solid #C2185B;
 }
 
 /* Chrysanthemum */
 .chrysanthemum img{
-    border:4px solid #F4B400;
+    border: 3px solid #F4B400;
 }
 
 
