@@ -11,7 +11,6 @@
 body{
     background:#f7f8fa;
     color:#333;
-    overflow-x:hidden;
     font-family:"Libertinus Math", serif;
 }
 
@@ -125,7 +124,6 @@ body{
     object-fit:cover;
     border-radius:18px;
     display:block;
-    transition: transform .6s ease,filter .4s ease;
 }
 
 /*==========================================================
@@ -146,7 +144,7 @@ body{
     margin-bottom:28px;
     padding-bottom:12px;
     border-bottom:3px solid;
-    
+    transition:.35s;
 }
 
 .flower-content p{
@@ -154,6 +152,7 @@ body{
     line-height:2.05;
     text-align:justify;
     letter-spacing:.3px;
+    transition:.35s;
 }
 
 /* ================= African Marigold ================= */
