@@ -35,14 +35,14 @@ header{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
-.hero, p{
+.hero-p{
     display: flex;
     justify-content: space-around;
     align-items: center;
     text-align: center;
 
 }
-button{
+.Btn{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,15 +51,61 @@ button{
     height: 35px;
     font-weight: 700;
     border-radius: 5px;
+    text-decoration: none;
+    background-color: #ffffff;
+    color: rgb(18, 18, 17);
     border-color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     transition: transform 0.5s ease, box-shadow 0.5s ease-out;
 }   
-button:hover{
+.Btn:hover{
     background-color: rgba(255, 255, 255, 0.2);
     color: #ffffff;
     border: 1px solid #ffffff;
+    text-decoration: none;
     transform: translateY(-5px);
     transition-duration: 0.5s;
-    transition:0.5s;
+}
+@media (max-width:768px){
+    .Btn{
+        width:50%;
+        height: 35px;
+        border-radius: 10px;
+        font-size: large;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .Btn:hover{
+        background-color: rgba(255, 255, 255, 0.2);
+        color: #ffffff;
+        border: 1px solid #ffffff;
+        text-decoration: none;
+        transform: translateY(-5px);
+        transition-duration: 0.5s;
+}
+}
+
+@media (max-width:425px){
+    .Btn{
+        width:50%;
+        height: 35px;
+        border-radius: 10px;
+        font-size: large;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .Btn:hover{
+        background-color: rgba(255, 255, 255, 0.2);
+        color: #ffffff;
+        border: 1px solid #ffffff;
+        text-decoration: none;
+        transform: translateY(-5px);
+        transition-duration: 0.5s;
+    }
+    .hero-p p{
+        font-size: 20px;
+        color: aqua;
+    }
 }
