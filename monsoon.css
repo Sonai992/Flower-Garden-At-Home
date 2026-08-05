@@ -1,39 +1,475 @@
+/*==========================================================
+    GLOBAL RESET
+==========================================================*/
+
 *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
-.header-H ,.header-P{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
+
+body{
+    background:#f7f8fa;
+    color:#333;
+    overflow-x:hidden;
+    font-family:"Libertinus Math", serif;
 }
+
+/*==========================================================
+    PAGE HEADER
+==========================================================*/
+
 .header-H{
-    font-size: 80px;
-    font-weight: 800;
-/* ================= 1st Font ============================= */
-
-    font-family: "Libertinus Math", system-ui;
-    font-weight: 600;
-    font-style: normal;
-    color: darkgreen;
+    text-align:center;
+    font-size:4rem;
+    color:#146c2e;
+    font-family:"Playfair Display", serif;
+    margin-top:35px;
 }
+
 .header-P{
-    font-family: "Quicksand", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-    color: green;
+    text-align:center;
+    font-family:"Quicksand", sans-serif;
+    font-size:1.1rem;
+    color:#3c8d40;
+    margin:12px 0 35px;
 }
-.Head-title{
-    /* font-family: "Arvo", serif;
-    font-weight: 800;
-    font-style: normal; */
 
-    font-family: "Slabo 27px", serif;
-    font-weight: 600;
-    font-style: normal;
+/*==========================================================
+    INTRODUCTION
+==========================================================*/
+
+.paragraph{
+    width:min(92%,1200px);
+    margin:auto;
+    font-size:1.08rem;
+    line-height:2;
+    text-align:justify;
+    font-family:"Playfair Display", serif;
+    border-top:2px solid #2f8f46;
+    padding-top:28px;
+    color:#444;
+}
+
+/*==========================================================
+    FLOWER CARD
+==========================================================*/
+
+.flower-card{
+    width:min(94%,1500px);
+    margin:70px auto;
+    display:flex;
+    align-items:center;
+    gap:55px;
+    padding:45px;
+    background:#ffffff;
+    border-radius:24px;
+    position:relative;  
+    box-shadow:0 20px 45px rgba(0,0,0,.08);
+    transition:transform .35s ease,box-shadow .35s ease;
+}
+
+/*==========================================================
+    Card Border
+==========================================================*/
+/* African Marigold */
+.marigold {
+    border:4px solid #F39C12;
+}
+
+/* Rain Lily */
+.rain-lily {
+    border:4px solid #EC4899;
+}
+
+/* Aparajita */
+.aparajita {
+    border:4px solid #2563EB;
+}
+
+/* Nayantara */
+.nayantara {
+    border:4px solid #E91E63;
+}
+
+/* Dopati */
+.dopati{
+    border:4px solid #C2185B;
+}
+
+/* Chrysanthemum */
+.chrysanthemum {
+    border:4px solid #F4B400;
+}
+
+/*==========================================================
+    ALTERNATE LAYOUT
+==========================================================*/
+
+.flower-card.reverse{
+    flex-direction:row-reverse;
+}
+
+/*==========================================================
+    IMAGE SECTION
+==========================================================*/
+
+.flower-image{
+    flex:1;
+    border-radius:18px;
+}
+
+.flower-image img{
+    width:100%;
+    height:510px;
+    object-fit:cover;
+    border-radius:18px;
+    display:block;
+    transition: transform .6s ease,filter .4s ease;
+}
+
+/*==========================================================
+    CONTENT SECTION
+==========================================================*/
+
+.flower-content{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.flower-content h2{
+    font-family:"Slabo 27px", serif;
+    font-size:3rem;
+    font-weight:600;
+    margin-bottom:28px;
+    padding-bottom:12px;
+    border-bottom:3px solid;
+    transition:.35s;
+}
+
+.flower-content p{
+    font-size:1.08rem;
+    line-height:2.05;
+    text-align:justify;
+    letter-spacing:.3px;
+    transition:.35s;
+}
+
+/* ================= African Marigold ================= */
+
+.marigold::before{
+    background:#F59E0B;
+}
+
+.marigold h2{
+    color:#D97706;
+    border-color:#D97706;
+}
+
+.marigold p{
+    color:#7A4E00;
+}
+
+/* ================= Rain Lily ================= */
+
+.rain-lily::before{
+    background:#EC4899;
+}
+
+.rain-lily h2{
+    color:#DB2777;
+    border-color:#DB2777;
+}
+
+.rain-lily p{
+    color:#9D174D;
+}
+
+/* ================= Aparajita ================= */
+
+
+.aparajita h2{
+    color:#2563EB;
+    border-color:#2563EB;
+}
+
+.aparajita p{
+    color:#1E3A8A;
+}
+
+/* ================= Nayantara ================= */
+
+.nayantara::before{
+    background:#F43F5E;
+}
+
+.nayantara h2{
+    color:#E11D48;
+    border-color:#E11D48;
+}
+
+.nayantara p{
+    color:#9F1239;
+}
+
+/* ================= Dopati ================= */
+
+.dopati::before{
+    background:#C2185B;
+}
+
+.dopati h2{
+    color:#C2185B;
+    border-color:#C2185B;
+}
+
+.dopati p{
+    color:#7B1E50;
+}
+
+/* ================= Chrysanthemum ================= */
+
+.chrysanthemum::before{
+    background:#F59E0B;
+}
+
+.chrysanthemum h2{
+    color:#EA580C;
+    border-color:#EA580C;
+}
+
+.chrysanthemum p{
+    color:#7C4A03;
+}
+
+/*==========================================================
+    CARD HOVER GLOW
+==========================================================*/
+
+.marigold:hover{
+    box-shadow:0 30px 60px rgba(245,158,11,.25);
+}
+
+.rain-lily:hover{
+    box-shadow:0 30px 60px rgba(236,72,153,.25);
+}
+
+.aparajita:hover{
+    box-shadow:0 30px 60px rgba(59,130,246,.25);
+}
+
+.nayantara:hover{
+    box-shadow:0 30px 60px rgba(244,63,94,.25);
+}
+
+.dopati:hover{
+    box-shadow:0 30px 60px rgba(194,24,91,.25);
+}
+
+.chrysanthemum:hover{
+    box-shadow:0 30px 60px rgba(245,158,11,.25);
+}
+
+/*==========================================================
+    IMAGE BORDER
+==========================================================*/
+
+.marigold img{
+    border:4px solid rgba(245,158,11,.15);
+}
+
+.rain-lily img{
+    border:4px solid rgba(236,72,153,.15);
+}
+
+.aparajita img{
+    border:4px solid rgba(59,130,246,.15);
+}
+
+.nayantara img{
+    border:4px solid rgba(244,63,94,.15);
+}
+
+.dopati img{
+    border:4px solid rgba(194,24,91,.15);
+}
+.chrysanthemum img{
+    border:4px solid rgba(245,158,11,.15);
+}
+/* African Marigold */
+.marigold img{
+    border:4px solid #F39C12;
+}
+
+/* Rain Lily */
+.rain-lily img{
+    border:4px solid #EC4899;
+}
+
+/* Aparajita */
+.aparajita img{
+    border:4px solid #2563EB;
+}
+
+/* Nayantara */
+.nayantara img{
+    border:4px solid #E91E63;
+}
+
+/* Dopati */
+.dopati img{
+    border:4px solid #C2185B;
+}
+
+/* Chrysanthemum */
+.chrysanthemum img{
+    border:4px solid #F4B400;
+}
+
+
+/*==========================================================
+    TABLET
+==========================================================*/
+
+@media (max-width:992px){
+
+    .flower-card,
+    .flower-card.reverse{
+        flex-direction:column;
+        text-align:center;
+        padding:35px;
+        gap:35px;
+
+    }
+
+    .flower-image{
+        width:100%;
+    }
+
+    .flower-image img{
+        width:100%;
+        height:380px;
+    }
+
+    .flower-content{
+        width:100%;
+    }
+
+    .flower-content h2{
+        font-size:2.4rem;
+        display:inline-block;
+        margin:auto auto 25px;
+    }
+
+    .flower-content p{
+        text-align:justify;
+        font-size:1.03rem;
+        line-height:1.9;
+    }
+
+}
+
+/*==========================================================
+    MOBILE
+==========================================================*/
+
+@media (max-width:768px){
+    .header-H{
+        font-size:2.8rem;
+    }
+
+    .header-P{
+        font-size:1rem;
+    }
+
+    .paragraph{
+        width:94%;
+        font-size:1rem;
+        line-height:1.85;
+    }
+
+    .flower-card{
+        width:95%;
+        padding:25px;
+        border-radius:18px;
+        gap:25px;
+    }
+
+    .flower-image img{
+        height:300px;
+        border-radius:15px;
+    }
+
+    .flower-content h2{
+        font-size:2rem;
+        margin-bottom:20px;
+    }
+
+    .flower-content p{
+        font-size:1rem;
+        line-height:1.8;
+    }
+
+}
+
+/*==========================================================
+    SMALL MOBILE
+==========================================================*/
+
+@media (max-width:480px){
+    .header-H{
+        font-size:2.2rem;
+    }
+
+    .header-P{
+        font-size:.95rem;
+    }
+
+    .paragraph{
+        width:95%;
+        font-size:.95rem;
+    }
+
+    .flower-card{
+        padding:18px;
+        border-radius:15px;
+    }
+
+    .flower-image img{
+        height:230px;
+    }
+
+    .flower-content h2{
+        font-size:1.65rem;
+    }
+
+    .flower-content p{
+        font-size:.95rem;
+        line-height:1.75;
+    }
+}
+
+/*==========================================================
+    LARGE DESKTOP
+==========================================================*/
+
+@media (min-width:1600px){
+    .flower-card{
+        max-width:1550px;
+    }
+
+    .flower-image img{
+        height:560px;
+    }
+
+    .flower-content h2{
+        font-size:3.3rem;
+    }
+
+    .flower-content p{
+        font-size:1.15rem;
+    }
 
 }
