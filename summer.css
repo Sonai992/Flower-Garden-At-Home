@@ -1,0 +1,258 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* body{
+  
+    background:#FFFDF5;
+    
+   
+} */
+body{
+    background:linear-gradient(
+        180deg,
+        #FFFDF4 0%,
+        #FFF7D1 45%,
+        #FFEFB5 100%
+    );
+    color:#333;
+    font-family:"Libertinus Math", serif;
+}
+.summer-h{
+    font-family: "Playfair Display", serif;
+    text-align: center;
+    font-size: 3.1rem;
+    margin: 35px;
+    color: #D97706;
+}
+.summer-p{
+    text-align:center;
+    font-family:"Quicksand", sans-serif;
+    font-size:1.1rem;
+    margin:1px 0 35px;
+    color: #D97706;
+}
+.paragraph{
+    display: block;
+    text-wrap: wrap;
+    text-align: justify;
+    border-top: 2px solid #D97706;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.6;
+    margin: 20px;
+    padding: 25px;
+    font-size: medium;
+    color: #d5a166;
+} 
+.cards{
+    flex-direction: row;
+    position: relative;
+    flex-direction: row;
+    width: min(94%,1500px);
+    margin: 65px auto;
+    width:min(94%,1500px);
+    margin:70px auto;
+    display:flex;
+    align-items:center;
+    gap:55px;
+    padding:45px;
+    background:#ffffff;
+    border: 2px solid #D97706;
+    border-radius:24px;
+    position:relative;  
+    box-shadow:0 20px 45px rgba(0,0,0,.08);
+    transition:transform .35s ease,box-shadow .35s ease;
+}
+.photo{
+    flex:1;
+    border-radius: 10px;
+}
+.photo img{
+    width:100%;
+    height:510px;
+    object-fit:cover;
+    border-radius:18px;
+    display:block;
+    border:3px solid #F39C12;
+
+
+}
+.flower-content{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+.flower-content p{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    font-size:1.08rem;
+    line-height:2.05;
+    text-align:justify;
+    letter-spacing:.3px;
+    transition:.35s;
+    color: #854803;
+}
+.flower-content h2{
+    font-family:"Slabo 27px", serif;
+    font-size:3rem;
+    font-weight:600;
+    margin-bottom:28px;
+    padding-bottom:12px;
+    border-bottom:3px solid;
+    transition:.35s;
+    color:#D97706;
+    border-color:#D97706
+}
+
+.cards:hover{
+    box-shadow:0 30px 60px rgba(245, 159, 11, 0.549);
+    transition: 0.35s;
+}
+
+
+/* ====================================================== */
+@media (max-width:992px){
+
+    .cards{
+        flex-direction:column;
+        text-align:center;
+        padding:35px;
+        gap:35px;
+
+    }
+
+    .photo{
+        width:100%;
+    }
+
+    .photo img{
+        width:100%;
+        height:380px;
+    }
+
+    .flower-content{
+        width:100%;
+    }
+
+    .flower-content h2{
+        font-size:2.4rem;
+        display:inline-block;
+        margin:auto auto 25px;
+    }
+
+    .flower-content p{
+        text-align:justify;
+        font-size:1.03rem;
+        line-height:1.9;
+    }
+
+}
+
+/*==========================================================
+    MOBILE
+==========================================================*/
+
+@media (max-width:768px){
+    .header-H{
+        font-size:2.8rem;
+    }
+
+    .header-P{
+        font-size:1rem;
+    }
+
+    .paragraph{
+        width:94%;
+        font-size:1rem;
+        line-height:1.85;
+    }
+
+    .flower-card{
+        width:95%;
+        padding:25px;
+        border-radius:18px;
+        gap:25px;
+    }
+
+    .photo img{
+        height:300px;
+        border-radius:15px;
+    }
+
+    .flower-content h2{
+        font-size:2rem;
+        margin-bottom:20px;
+    }
+
+    .flower-content p{
+        font-size:1rem;
+        line-height:1.8;
+    }
+
+}
+
+/*==========================================================
+    SMALL MOBILE
+==========================================================*/
+
+@media (max-width:480px){
+    .header-H{
+        font-size:2.2rem;
+    }
+
+    .header-P{
+        font-size:.95rem;
+    }
+
+    .paragraph{
+        width:95%;
+        font-size:.95rem;
+    }
+
+    .flower-card{
+        padding:18px;
+        border-radius:15px;
+    }
+
+    .photo img{
+        height:230px;
+    }
+
+    .flower-content h2{
+        font-size:1.65rem;
+    }
+
+    .flower-content p{
+        font-size:.95rem;
+        line-height:1.75;
+    }
+}
+
+/*==========================================================
+    LARGE DESKTOP
+==========================================================*/
+
+@media (min-width:1600px){
+    .flower-card{
+        max-width:1550px;
+    }
+
+    .photo img{
+        height:560px;
+    }
+
+    .flower-content h2{
+        font-size:3.3rem;
+    }
+
+    .flower-content p{
+        font-size:1.15rem;
+    }
+
+}
