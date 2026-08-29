@@ -3,12 +3,11 @@
     margin: 0;
     box-sizing: border-box;
 }
-/* body{
-  
-    background:#FFFDF5;
-    
-   
-} */
+
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     background:linear-gradient(
         180deg,
@@ -34,25 +33,24 @@ body{
     color: #D97706;
 }
 .paragraph{
-    display: block;
-    text-wrap: wrap;
-    text-align: justify;
-    border-top: 2px solid #D97706;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.2rem;
-    font-weight: 500;
-    line-height: 1.6;
-    margin: 20px;
-    padding: 25px;
-    font-size: medium;
-    color: #d5a166;
+    display:block;
+    max-width:1200px;
+    margin:30px auto 55px;
+    padding:28px 35px;
+    border-top:2px solid #D97706;
+    font-family:"Poppins", sans-serif;
+    font-size:1.08rem;
+    font-weight:400;
+    line-height:1.8;
+    letter-spacing:0.15px;
+    word-spacing:2px;
+    text-align:justify;
+    text-align-last:left;
+    overflow-wrap:break-word;
+    color:#854803;
 } 
 .cards{
-    flex-direction: row;
-    position: relative;
-    flex-direction: row;
-    width: min(94%,1500px);
-    margin: 65px auto;
+    position:relative;
     width:min(94%,1500px);
     margin:70px auto;
     display:flex;
@@ -88,15 +86,15 @@ body{
 }
 .flower-content p{
     flex:1;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
+    display:block;
     font-size:1.08rem;
-    line-height:2.05;
+    line-height:1.8;
     text-align:justify;
-    letter-spacing:.3px;
-    transition:.35s;
-    color: #854803;
+    text-align-last:left;
+    letter-spacing:0.15px;
+    word-spacing:1.5px;
+    margin:0;
+    color:#854803;
 }
 .flower-content h2{
     font-family:"Slabo 27px", serif;
@@ -148,8 +146,10 @@ body{
 
     .flower-content p{
         text-align:justify;
+        text-align-last:left;
         font-size:1.03rem;
-        line-height:1.9;
+        line-height:1.75;
+        word-spacing:1px;
     }
 
 }
@@ -169,8 +169,11 @@ body{
 
     .paragraph{
         width:94%;
+        margin:25px auto 45px;
+        padding:22px;
         font-size:1rem;
-        line-height:1.85;
+        line-height:1.75;
+        word-spacing:1px;
     }
 
     .flower-card{
@@ -212,7 +215,11 @@ body{
 
     .paragraph{
         width:95%;
+        margin:20px auto 40px;
+        padding:18px;
         font-size:.95rem;
+        line-height:1.7;
+        word-spacing:.5px;
     }
 
     .flower-card{
@@ -230,7 +237,8 @@ body{
 
     .flower-content p{
         font-size:.95rem;
-        line-height:1.75;
+        line-height:1.7;
+        word-spacing:.5px;
     }
 }
 
@@ -256,3 +264,32 @@ body{
     }
 
 }
+
+
+/* Paragraph typography and spacing cleanup */
+.paragraph,
+.flower-content p{
+    hyphens:auto;
+    white-space:normal;
+}
+
+
+/* =========================================
+   IMMERSIVE SCROLL REVEAL
+   ========================================= */
+.cards {
+    opacity: 1;
+    transform: translateY(0);
+    animation: cardReveal linear both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 35%;
+}
+@keyframes cardReveal {
+    from { opacity: 0; transform: translateY(80px) scale(.97); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.cards.show { opacity: 1; transform: translateY(0) scale(1); }
+@supports not (animation-timeline: view()) {
+    .cards { opacity: 1; transform: none; animation: none; }
+}
+
