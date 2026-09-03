@@ -1,0 +1,567 @@
+/* ==========================================================
+   GLOBAL RESET
+========================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+/* ==========================================================
+   BODY
+========================================================== */
+
+body{
+    background:
+    linear-gradient(
+        180deg,
+        #fffaf2 0%,
+        #fff1df 50%,
+        #fce3c4 100%
+    );
+    color:#333;
+    overflow-x:hidden;
+}
+
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.autumn-header{
+    text-align:center;
+    padding:70px 20px 40px;
+}
+
+
+.autumn-header h1{
+    font-family:"Playfair Display", serif;
+    font-size:4.5rem;
+    color:#A84B16;
+    margin-bottom:15px;
+}
+
+.autumn-header p{
+    font-family:"Quicksand", sans-serif;
+    font-size:1.15rem;
+    color:#8B5A2B;
+}
+
+/* ==========================================================
+   INTRODUCTION
+========================================================== */
+
+.autumn-intro{
+    width:90%;
+    max-width:1200px;
+    margin:20px auto 70px;
+}
+
+
+.autumn-intro p{
+    font-family:"Quicksand", sans-serif;
+    font-size:1.08rem;
+    line-height:1.95;
+    text-align:justify;
+    color:#5F4630;
+    border-top:2px solid #D97706;
+    border-bottom:2px solid #D97706;
+    padding:30px 10px;
+}
+
+/* ==========================================================
+   FLOWER CARD
+========================================================== */
+
+.flower-card{
+    width:90%;
+    max-width:1350px;
+    margin:70px auto;
+    padding:35px;
+    display:flex;
+    align-items:center;
+    gap:55px;
+    background:#ffffff;
+    border-radius:24px;
+    position:relative;
+    overflow:hidden;
+    box-shadow:0 15px 40px rgba(90,50,20,.10);
+    transition:
+      transform .4s ease,box-shadow .4s ease;
+
+}
+
+/* LEFT COLOR STRIP */
+
+.flower-card::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    width:9px;
+    height:100%;
+    background:#D97706;
+}
+
+
+/* ==========================================================
+   INDIVIDUAL FLOWER HOVER COLOR THEMES
+========================================================== */
+
+/* 🌼 Chrysanthemum - Golden Yellow */
+
+.chrysanthemum:hover{
+    transform:translateY(-10px);
+    box-shadow:0 25px 60px rgba(230,159,0,.30);
+}
+
+
+/* 🟠 Marigold - Orange */
+
+.marigold:hover{
+    transform:translateY(-10px);
+    box-shadow:0 25px 60px rgba(245,124,0,.30);
+}
+
+
+/* 🌺 Dahlia - Deep Pink */
+
+.dahlia:hover{
+    transform:translateY(-10px);
+    box-shadow:0 25px 60px rgba(194,24,91,.30);
+}
+
+
+/* 💜 Aster - Purple */
+
+.aster:hover{
+    transform:translateY(-10px);
+    box-shadow:0 25px 60px rgba(126,87,194,.30);
+}
+
+
+/* 💙💜 Pansy - Indigo */
+
+.pansy:hover{
+    transform:translateY(-10px);
+    box-shadow:0 25px 60px rgba(92,107,192,.30);
+}
+
+
+/* 🌸 Petunia - Pink */
+
+.petunia:hover{
+    transform:translateY(-10px);
+    box-shadow:0 25px 60px rgba(216,27,96,.30);
+}
+
+
+/* ==========================================================
+   REVERSE CARD
+========================================================== */
+
+.flower-card.reverse{
+    flex-direction:row-reverse;
+}
+
+
+/* ==========================================================
+   IMAGE
+========================================================== */
+
+.flower-image{
+    flex:1;
+    overflow:hidden;
+    border-radius:18px;
+}
+
+.flower-image img{
+    width:100%;
+    height:460px;
+    object-fit:cover;
+    display:block;
+    border-radius:18px;
+    transition:transform .6s ease;
+}
+
+
+.flower-card:hover .flower-image img{
+    transform:scale(1.06);
+
+}
+
+
+/* ==========================================================
+   CONTENT
+========================================================== */
+
+.flower-content{
+    flex:1;
+
+}
+
+
+.flower-content h2{
+    font-family:"Plfair Display", serif;
+    font-size:2.7rem;
+    margin-bottom:25px;
+    padding-bottom:10px;
+    display:inline-block;
+    border-bottom:4px solid;
+}
+
+
+.flower-content p{
+    font-family:"Quicksand", sans-serif;
+    font-size:1.05rem;
+    line-height:1.95;
+    text-align:justify;
+}
+
+
+/* ==========================================================
+   CHRYSANTHEMUM
+========================================================== */
+
+.chrysanthemum::before{
+    background:#E69F00;
+
+}
+
+.chrysanthemum h2{
+    color:#C77700;
+    border-color:#E69F00;
+
+}
+
+.chrysanthemum p{
+    color:#6E4B16;
+}
+
+.chrysanthemum img{
+    border:4px solid #F6D58B;
+
+}
+
+
+/* ==========================================================
+   MARIGOLD
+========================================================== */
+
+.marigold::before{
+    background:#F57C00;
+
+}
+
+.marigold h2{
+    color:#D95F02;
+    border-color:#F57C00;
+
+}
+
+.marigold p{
+    color:#704214;
+}
+
+.marigold img{
+    border:4px solid #FFD08A;
+}
+
+
+/* ==========================================================
+   DAHLIA
+========================================================== */
+
+.dahlia::before{
+    background:#C2185B;
+
+}
+
+.dahlia h2{
+    color:#AD1457;
+    border-color:#C2185B;
+
+}
+
+.dahlia p{
+    color:#6A1B3D;
+}
+
+.dahlia img{
+    border:4px solid #F3B3CB;
+
+}
+
+
+/* ==========================================================
+   ASTER
+========================================================== */
+
+.aster::before{
+    background:#7E57C2;
+
+}
+
+.aster h2{
+    color:#5E35B1;
+    border-color:#7E57C2;
+}
+
+.aster p{
+    color:#45276B;
+
+}
+
+.aster img{
+    border:4px solid #D1C4E9;
+}
+
+
+/* ==========================================================
+   PANSY
+========================================================== */
+
+.pansy::before{
+    background:#5C6BC0;
+}
+
+.pansy h2{
+    color:#3949AB;
+    border-color:#5C6BC0;
+}
+
+.pansy p{
+    color:#303F6B;
+
+}
+
+.pansy img{
+    border:4px solid #C5CAE9;
+}
+
+
+/* ==========================================================
+   PETUNIA
+========================================================== */
+
+.petunia::before{
+    background:#D81B60;
+}
+
+.petunia h2{
+
+    color:#C2185B;
+    border-color:#D81B60;
+}
+
+.petunia p{
+    color:#6D1B42;
+}
+
+.petunia img{
+    border:4px solid #F8BBD0;
+
+}
+
+
+/* ==========================================================
+   GARDENING TIPS
+========================================================== */
+
+
+.garden-tips{
+    width:90%;
+    max-width:1300px;
+    margin:100px auto;
+
+}
+
+.garden-tips h2{
+    font-family:"Playfair Display", serif;
+    text-align:center;
+    font-size:3rem;
+    color:#A84B16;
+    margin-bottom:50px;
+    
+}
+
+
+/* ==========================================================
+   TIPS GRID
+========================================================== */
+
+.tips-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.tip{
+    background:#ffffff;
+    padding:30px;
+    border-radius:18px;
+    border-top:5px solid #D97706;
+    box-shadow:0 10px 30px rgba(90,50,20,.08);
+    transition:.35s ease;
+}
+
+.tip:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 40px rgba(90,50,20,.15);
+}
+
+.tip h3{
+    font-family:"Playfair Display", serif;
+    font-size:1.4rem;
+    color:#B45309;
+    margin-bottom:15px;
+
+}
+
+.tip p{
+    font-family:"Quicksand", sans-serif;
+    line-height:1.7;
+    color:#5F4630;
+}
+
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+footer{
+    margin-top:80px;
+    padding:35px 20px;
+    text-align:center;
+    background:#7C3F1D;
+    color:#FFF8EE;
+    font-family:"Quicksand", sans-serif;
+}
+
+
+/* ==========================================================
+   TABLET RESPONSIVE
+========================================================== */
+
+@media(max-width:992px){
+
+    .flower-card,
+    .flower-card.reverse{
+        flex-direction:column;
+        gap:35px;
+    }
+
+    .flower-image{
+        width:100%;
+    }
+
+    .flower-image img{
+        height:380px;
+    }
+
+    .flower-content h2{
+        font-size:2.3rem;
+    }
+
+    .tips-grid{
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+}
+
+
+/* ==========================================================
+   MOBILE RESPONSIVE
+========================================================== */
+
+@media(max-width:768px){
+
+    .autumn-header h1{
+        font-size:3rem;
+    }
+
+    .autumn-header p{
+        font-size:1rem;
+
+    }
+
+    .autumn-intro{
+        width:92%;
+    }
+
+    .autumn-intro p{
+        font-size:1rem;
+        line-height:1.8;
+    }
+
+    .flower-card{
+        width:94%;
+        padding:25px;
+        margin:45px auto;
+    }
+
+    .flower-image img{
+        height:300px;
+    }
+
+    .flower-content h2{
+        font-size:2rem;
+    }
+
+    .flower-content p{
+        font-size:1rem;
+        line-height:1.8;
+    }
+
+    .garden-tips h2{
+        font-size:2.3rem;
+    }
+
+    .tips-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+
+/* ==========================================================
+   SMALL MOBILE
+========================================================== */
+
+@media(max-width:480px){
+
+    .autumn-header{
+        padding:50px 15px 30px;
+    }
+
+    .autumn-header h1{
+        font-size:2.4rem;
+    }
+
+    .flower-card{
+        padding:18px;
+        border-radius:18px;
+    }
+
+    .flower-image img{
+        height:230px;
+    }
+
+    .flower-content h2{
+        font-size:1.7rem;
+    }
+
+    .flower-content p{
+        font-size:.95rem;
+        line-height:1.75;
+    }
+
+    .garden-tips h2{
+        font-size:1.9rem;
+    }
+
+    .tip{
+        padding:22px;
+    }
+}

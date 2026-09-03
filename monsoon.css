@@ -441,17 +441,12 @@ body{
 
 /* ==================   Animation ====================== */
 .flower-card{
-    opacity: 1;
     transform: translateY(0);
     animation: cardReveal linear both;
     animation-timeline: view();
     animation-range: entry 0% cover 35%;
 }
 @keyframes cardReveal {
-    from { opacity: 0; transform: translateY(80px) scale(.97); }
-    to { opacity: 1; transform: translateY(0) scale(1); }
-}
-.cards.show { opacity: 1; transform: translateY(0) scale(1); }
-@supports not (animation-timeline: view()) {
-    .cards { opacity: 1; transform: none; animation: none; }
+    from {transform: translateY(80px) scale(.97); }
+    to { transform: translateY(0) scale(1); }
 }
