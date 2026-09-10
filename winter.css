@@ -1,0 +1,527 @@
+/* ==========================================================
+   WINTER GARDEN
+   Styling matched to the uploaded winter.html
+
+   Existing HTML class mapping:
+   .chrysanthemum -> Chandramallika
+   .marigold      -> Dahlia
+   .dahlia        -> Winter Marigold
+   .aster         -> Petunia
+========================================================== */
+
+/* ==========================================================
+   GLOBAL RESET
+========================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background:
+        linear-gradient(
+            180deg,
+            #f9fcff 0%,
+            #eef6fb 45%,
+            #e4f0f7 100%
+        );
+    color: #2f3e46;
+    overflow-x: hidden;
+}
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.autumn-header {
+    text-align: center;
+    padding: 70px 20px 40px;
+}
+
+.autumn-header h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 4.5rem;
+    color: #315872;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.autumn-header p {
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.15rem;
+    color: #567486;
+}
+
+/* ==========================================================
+   INTRODUCTION
+========================================================== */
+
+.autumn-intro {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto 70px;
+}
+
+.autumn-intro p {
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.08rem;
+    line-height: 1.95;
+    text-align: justify;
+    color: #455a64;
+    border-top: 2px solid #82a9bf;
+    border-bottom: 2px solid #82a9bf;
+    padding: 30px 10px;
+}
+
+/* ==========================================================
+   FLOWER CARD
+========================================================== */
+
+.flower-card {
+    width: 90%;
+    max-width: 1350px;
+    margin: 70px auto;
+    padding: 35px;
+    display: flex;
+    align-items: center;
+    gap: 55px;
+    background: var(--flower-bg);
+    border: 3px solid var(--flower-border);
+    border-radius: 24px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(48, 76, 92, 0.12);
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        background 0.4s ease,
+        border-color 0.4s ease;
+}
+
+/* Left color strip */
+.flower-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 9px;
+    height: 100%;
+    background: var(--flower-border);
+    transition: background 0.4s ease;
+}
+
+/* Soft decorative glow */
+.flower-card::after {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    right: -110px;
+    bottom: -110px;
+    border-radius: 50%;
+    background: var(--flower-glow);
+    filter: blur(18px);
+    opacity: 0.18;
+    pointer-events: none;
+}
+
+/* ==========================================================
+   REVERSE CARD
+========================================================== */
+
+.flower-card.reverse {
+    flex-direction: row-reverse;
+}
+
+/* ==========================================================
+   IMAGE
+========================================================== */
+
+.flower-image {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 18px;
+}
+
+.flower-image img {
+    width: 100%;
+    height: 460px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: 15px;
+    border: 4px solid var(--flower-image-border);
+    transition:
+        transform 0.6s ease,
+        border-color 0.4s ease,
+        filter 0.4s ease;
+}
+
+.flower-card:hover .flower-image img {
+    transform: scale(1.06);
+    border-color: var(--flower-title);
+    filter: saturate(1.05);
+}
+
+/* ==========================================================
+   CONTENT
+========================================================== */
+
+.flower-content {
+    flex: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.flower-content h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 2.7rem;
+    color: var(--flower-title);
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    display: inline-block;
+    border-bottom: 4px solid var(--flower-border);
+    transition:
+        color 0.4s ease,
+        border-color 0.4s ease,
+        transform 0.4s ease;
+}
+
+.flower-content p {
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.95;
+    text-align: justify;
+    color: var(--flower-text);
+}
+
+.flower-content p b {
+    color: var(--flower-title);
+    font-weight: 700;
+}
+
+.flower-card:hover .flower-content h2 {
+    transform: translateX(4px);
+}
+
+/* ==========================================================
+   FLOWER 1 - CHANDRAMALLIKA
+   Existing class: .chrysanthemum
+   Pink / Rose winter palette
+========================================================== */
+
+.chrysanthemum {
+    --flower-border: #e7a1b3;
+    --flower-image-border: #f2c3cf;
+    --flower-title: #c2185b;
+    --flower-text: #623547;
+    --flower-bg: #fff6f9;
+    --flower-glow: #e88bab;
+}
+
+.chrysanthemum:hover {
+    transform: translateY(-10px);
+    background: #fff0f5;
+    border-color: var(--flower-title);
+    box-shadow: 0 25px 60px rgba(194, 24, 91, 0.24);
+}
+
+.chrysanthemum:hover::before {
+    background: var(--flower-title);
+}
+
+/* ==========================================================
+   FLOWER 2 - DAHLIA
+   Existing class: .marigold
+   Deep burgundy / warm pink palette
+========================================================== */
+
+.marigold {
+    --flower-border: #d78ba8;
+    --flower-image-border: #efbfd0;
+    --flower-title: #8e244d;
+    --flower-text: #5d3042;
+    --flower-bg: #fff5f8;
+    --flower-glow: #d78ba8;
+}
+
+.marigold:hover {
+    transform: translateY(-10px);
+    background: #fff0f5;
+    border-color: var(--flower-title);
+    box-shadow: 0 25px 60px rgba(142, 36, 77, 0.26);
+}
+
+.marigold:hover::before {
+    background: var(--flower-title);
+}
+
+/* ==========================================================
+   FLOWER 3 - WINTER MARIGOLD
+   Existing class: .dahlia
+   Orange / golden palette
+========================================================== */
+
+.dahlia {
+    --flower-border: #f3b562;
+    --flower-image-border: #ffd89b;
+    --flower-title: #d97706;
+    --flower-text: #68461c;
+    --flower-bg: #fff9ef;
+    --flower-glow: #f3b562;
+}
+
+.dahlia:hover {
+    transform: translateY(-10px);
+    background: #fff5df;
+    border-color: var(--flower-title);
+    box-shadow: 0 25px 60px rgba(217, 119, 6, 0.27);
+}
+
+.dahlia:hover::before {
+    background: var(--flower-title);
+}
+
+/* ==========================================================
+   FLOWER 4 - PETUNIA
+   Existing class: .aster
+   Purple / lavender palette
+========================================================== */
+
+.aster {
+    --flower-border: #b8a5e3;
+    --flower-image-border: #d9cff2;
+    --flower-title: #6a4fb3;
+    --flower-text: #483a66;
+    --flower-bg: #faf8ff;
+    --flower-glow: #b8a5e3;
+}
+
+.aster:hover {
+    transform: translateY(-10px);
+    background: #f5f1ff;
+    border-color: var(--flower-title);
+    box-shadow: 0 25px 60px rgba(106, 79, 179, 0.26);
+}
+
+.aster:hover::before {
+    background: var(--flower-title);
+}
+
+/* ==========================================================
+   GARDENING TIPS
+========================================================== */
+
+.garden-tips {
+    width: 90%;
+    max-width: 1300px;
+    margin: 100px auto;
+}
+
+.garden-tips h2 {
+    font-family: "Playfair Display", serif;
+    text-align: center;
+    font-size: 3rem;
+    color: #315872;
+    margin-bottom: 50px;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.tip {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 18px;
+    border-top: 5px solid #82a9bf;
+    box-shadow: 0 10px 30px rgba(56, 86, 102, 0.08);
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease,
+        background 0.35s ease;
+}
+
+.tip:hover {
+    transform: translateY(-8px);
+    border-top-color: #577f98;
+    background: #f8fcff;
+    box-shadow: 0 20px 40px rgba(56, 86, 102, 0.15);
+}
+
+.tip h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.4rem;
+    color: #476f86;
+    margin-bottom: 15px;
+}
+
+.tip p {
+    font-family: "Quicksand", sans-serif;
+    line-height: 1.7;
+    color: #52666f;
+}
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+footer {
+    margin-top: 80px;
+    padding: 35px 20px;
+    text-align: center;
+    background: #315872;
+    color: #f4f9fc;
+    font-family: "Quicksand", sans-serif;
+}
+
+/* ==========================================================
+   SCROLL REVEAL
+   No opacity animation; transform only
+========================================================== */
+
+.flower-card {
+    animation: cardReveal linear both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 35%;
+}
+
+@keyframes cardReveal {
+    from {
+        transform: translateY(80px) scale(0.97);
+    }
+
+    to {
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 992px) {
+
+    .flower-card,
+    .flower-card.reverse {
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .flower-image {
+        width: 100%;
+    }
+
+    .flower-image img {
+        height: 380px;
+    }
+
+    .flower-content h2 {
+        font-size: 2.3rem;
+    }
+
+    .tips-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 768px) {
+
+    .autumn-header h1 {
+        font-size: 3rem;
+    }
+
+    .autumn-header p {
+        font-size: 1rem;
+    }
+
+    .autumn-intro {
+        width: 92%;
+    }
+
+    .autumn-intro p {
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+
+    .flower-card {
+        width: 94%;
+        padding: 25px;
+        margin: 45px auto;
+    }
+
+    .flower-image img {
+        height: 300px;
+    }
+
+    .flower-content h2 {
+        font-size: 2rem;
+    }
+
+    .flower-content p {
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+
+    .garden-tips h2 {
+        font-size: 2.3rem;
+    }
+
+    .tips-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================================
+   SMALL MOBILE
+========================================================== */
+
+@media (max-width: 480px) {
+
+    .autumn-header {
+        padding: 50px 15px 30px;
+    }
+
+    .autumn-header h1 {
+        font-size: 2.4rem;
+    }
+
+    .flower-card {
+        padding: 18px;
+        border-radius: 18px;
+    }
+
+    .flower-image img {
+        height: 230px;
+    }
+
+    .flower-content h2 {
+        font-size: 1.7rem;
+    }
+
+    .flower-content p {
+        font-size: 0.95rem;
+        line-height: 1.75;
+    }
+
+    .garden-tips h2 {
+        font-size: 1.9rem;
+    }
+
+    .tip {
+        padding: 22px;
+    }
+}

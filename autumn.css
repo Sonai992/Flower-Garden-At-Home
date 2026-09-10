@@ -439,7 +439,27 @@ footer{
     color:#FFF8EE;
     font-family:"Quicksand", sans-serif;
 }
+/* ===========  Fadu Animation =============== */
+.flower-card{
+    transform: translateY(0);
+    animation: cardReveal linear both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 35%;
+}
+@keyframes cardReveal {
+    from {transform: translateY(80px) scale(.97); }
+    to { transform: translateY(0) scale(1); }
+}
 
+@keyframes cardReveal{
+    from{
+        transform:translateY(80px) scale(.97);
+    }
+
+    to{
+        transform:translateY(0) scale(1);
+    }
+}
 
 /* ==========================================================
    TABLET RESPONSIVE
