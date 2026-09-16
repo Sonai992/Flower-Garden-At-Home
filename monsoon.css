@@ -293,8 +293,15 @@ body{
 .chrysanthemum img{
     border: 3px solid #F4B400;
 }
-
-
+/* ========== Footer ========== */
+footer {
+    margin-top: 80px;
+    padding: 35px 20px;
+    text-align: center;
+    background: #2e7d5b;
+    color: #f4f9fc;
+    font-family: "Quicksand", sans-serif;
+}
 /*==========================================================
     TABLET
 ==========================================================*/
