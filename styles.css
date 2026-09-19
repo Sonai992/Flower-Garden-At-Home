@@ -200,6 +200,10 @@ body{
     box-shadow: 0 16px 28px -8px rgba(98, 123, 93, 0.684);
     transform: translateY(-5px); /* Smooth slight lift on hover */
 }
+.S_flowers:hover{
+    box-shadow: 0 16px 28px -8px rgba(98, 123, 93, 0.684);
+    transform: translateY(-5px); /* Smooth slight lift on hover */
+}
 /* ================   Animation   ================================ */
 @keyframes fadeup{
     from{
