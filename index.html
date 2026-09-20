@@ -3,14 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flower-Garden</title>
-     <link rel='stylesheet' href='style.css'>
+    <meta name="description" content="Flower Garden — a simple guide to growing beautiful flowers at home.">
+    <title>Flower Garden</title>
+
+    <link rel="icon" type="image/png" href="Flower-Garden-Favicon.png">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Preload every slideshow image to prevent blank frames/flicker. -->
+    <link rel="preload" as="image" href="images/rose.jpg">
+    <link rel="preload" as="image" href="images/garden-web.png">
+    <link rel="preload" as="image" href="images/marigold.jpg">
+    <link rel="preload" as="image" href="images/garden-pots.jpg">
+    <link rel="preload" as="image" href="images/chrysanthemum.jpg">
 </head>
+
 <body>
-    <header>
-    <h1 class="hero  hero1">Flower Garden</h1>
-    <p class="hero-p">How a beautiful garden be done at home</p>
-    <a class="Btn" href="garden.html">Explore</a>
+    <header class="hero" id="home">
+        <div class="hero-slideshow" aria-hidden="true">
+            <div class="slide slide-1"></div>
+            <div class="slide slide-2"></div>
+            <div class="slide slide-3"></div>
+            <div class="slide slide-4"></div>
+            <div class="slide slide-5"></div>
+        </div>
+        <div class="hero-shade"></div>
+
+        <nav class="topbar" aria-label="Primary navigation">
+            <a class="brand" href="#home">
+                <span class="brand-flower">✿</span>
+                <span>Flower Garden</span>
+            </a>
+            <a class="nav-link" href="#gallery">Gallery</a>
+        </nav>
+
+        <div class="hero-content">
+            <span class="eyebrow">BLOOM • GROW • ENJOY</span>
+            <h1>A little garden<br>can brighten every day.</h1>
+            <p>Explore simple ideas for growing beautiful flowers right at home.</p>
+
+            <div class="hero-actions">
+                <a class="btn btn-primary" href="garden.html">Explore Garden <span>→</span></a>
+                <a class="btn btn-ghost" href="#gallery">View Flowers</a>
+            </div>
+        </div>
+
+        <a class="scroll-cue" href="#gallery" aria-label="Scroll to gallery">↓</a>
     </header>
+
+    <main>
+        <section class="gallery-section" id="gallery">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow dark">FLOWER GALLERY</span>
+                    <h2>Bring the garden to life.</h2>
+                    <br>
+                    <p>A small collection of flowers from the garden, arranged as a clean image gallery.</p>
+                </div>
+            </div>
+
+            <div class="gallery-grid">
+                <figure class="flower-card tall">
+                    <img src="images/rose.jpg" alt="Pink rose blooming in the garden" loading="lazy">
+                    <figcaption><strong>Pink Rose</strong><span>Soft and graceful</span></figcaption>
+                </figure>
+
+                <figure class="flower-card">
+                    <img src="images/pink-chrysanthemum.jpg" alt="Pink chrysanthemums with green leaves" loading="lazy">
+                    <figcaption><strong>Pink Chrysanthemum</strong><span>Soft garden colour</span></figcaption>
+                </figure>
+
+                <figure class="flower-card">
+                    <img src="images/marigold.jpg" alt="Bright orange marigold flowers" loading="lazy">
+                    <figcaption><strong>Chandramallika</strong><span>Yello Golden garden glow</span></figcaption>
+                </figure>
+
+                <figure class="flower-card wide">
+                    <img src="images/garden-web.png" alt="Colourful flowers framing a lush garden" loading="lazy">
+                    <figcaption><strong>Garden Blooms</strong><span>Colour, texture and freshness</span></figcaption>
+                </figure>
+
+                <figure class="flower-card">
+                    <img src="images/white-flower.jpg" alt="Delicate white flowers against green leaves" loading="lazy">
+                    <figcaption><strong>White Flowers</strong><span>Simple and elegant</span></figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <span>© 2026 Flower Garden | Aparna pal Pain</span>
+        <span>Made with 🌿 and a little sunlight</span>
+    </footer>
 </body>
 </html>

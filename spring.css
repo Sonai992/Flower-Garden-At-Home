@@ -1,0 +1,698 @@
+/* ==========================================================
+   SPRING GARDEN
+   Styling matched to spring.html
+   (same structure as winter.html / winter.css)
+
+   Flower class mapping - East India:
+   .palash       -> Palash (Flame of the Forest)
+   .madhabilata  -> Madhabilata (Hiptage / Madhavi)
+   .shimul       -> Shimul (Red Silk Cotton)
+
+   Flower class mapping - South India:
+   .jacaranda    -> Jacaranda
+   .tabebuia     -> Tabebuia (Pink Trumpet Tree)
+   .kanikonna    -> Kanikonna (Golden Shower)
+
+   Spring palette:
+   Fresh leaf green for the page itself, with every card
+   taking the color of its blossom (flame orange, mint,
+   crimson, violet, rose pink and golden yellow).
+========================================================== */
+
+/* ==========================================================
+   GLOBAL RESET
+========================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background:
+        linear-gradient(
+            180deg,
+            #fbfff7 0%,
+            #f0f8e8 45%,
+            #e4f2d8 100%
+        );
+    color: #2f4636;
+    font-family: "Quicksand", sans-serif;
+    overflow-x: hidden;
+}
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.spring-header {
+    text-align: center;
+    padding: 70px 20px 40px;
+}
+
+.spring-header h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 4.5rem;
+    color: #2f6b3a;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.spring-header p {
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.15rem;
+    color: #4f7a4a;
+}
+
+/* ==========================================================
+   INTRODUCTION
+========================================================== */
+
+.spring-intro {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto 70px;
+}
+
+.spring-intro p {
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.08rem;
+    line-height: 1.95;
+    text-align: justify;
+    color: #3f5c45;
+    border-top: 2px solid #9ccb86;
+    border-bottom: 2px solid #9ccb86;
+    padding: 30px 10px;
+}
+
+/* ==========================================================
+   FLOWER CARD
+========================================================== */
+
+.flower-card {
+    width: 90%;
+    max-width: 1350px;
+    margin: 70px auto;
+    padding: 35px;
+    display: flex;
+    align-items: center;
+    gap: 55px;
+    background: var(--flower-bg);
+    border: 3px solid var(--flower-border);
+    border-radius: 24px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(47, 90, 58, 0.12);
+    transition:
+        translate 0.4s ease,
+        box-shadow 0.4s ease,
+        background 0.4s ease,
+        border-color 0.4s ease;
+}
+
+/* Left color strip */
+.flower-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 9px;
+    height: 100%;
+    background: var(--flower-border);
+    transition: background 0.4s ease;
+}
+
+/* Soft decorative glow */
+.flower-card::after {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    right: -110px;
+    bottom: -110px;
+    border-radius: 50%;
+    background: var(--flower-glow);
+    filter: blur(18px);
+    opacity: 0.18;
+    pointer-events: none;
+}
+
+/* ==========================================================
+   REVERSE CARD
+========================================================== */
+
+.flower-card.reverse {
+    flex-direction: row-reverse;
+}
+
+/* ==========================================================
+   IMAGE
+========================================================== */
+
+.flower-image {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 18px;
+}
+
+.flower-image img {
+    width: 100%;
+    height: 460px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: 15px;
+    border: 4px solid var(--flower-image-border);
+
+    /* Soft blossom-colored placeholder until the photo loads */
+    background: linear-gradient(
+        135deg,
+        var(--flower-image-border),
+        var(--flower-bg)
+    );
+    color: var(--flower-title);
+    font-family: "Quicksand", sans-serif;
+    font-weight: 600;
+
+    transition:
+        transform 0.6s ease,
+        border-color 0.4s ease,
+        filter 0.4s ease;
+}
+
+.flower-card:hover .flower-image img {
+    transform: scale(1.06);
+    border-color: var(--flower-title);
+    filter: saturate(1.05);
+}
+
+/* ==========================================================
+   CONTENT
+========================================================== */
+
+.flower-content {
+    flex: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.flower-content h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 2.7rem;
+    color: var(--flower-title);
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    display: inline-block;
+    border-bottom: 4px solid var(--flower-border);
+    transition:
+        color 0.4s ease,
+        border-color 0.4s ease,
+        transform 0.4s ease;
+}
+
+.flower-content p {
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.95;
+    text-align: justify;
+    color: var(--flower-text);
+}
+
+.flower-content p b {
+    color: var(--flower-title);
+    font-weight: 700;
+}
+
+.flower-card:hover .flower-content h2 {
+    transform: translateX(4px);
+}
+
+/* ==========================================================
+   FLOWER 1 - PALASH (East India)
+   Flame orange palette
+========================================================== */
+
+.palash {
+    --flower-border: #f4a77a;
+    --flower-image-border: #fbcdb0;
+    --flower-title: #c2410c;
+    --flower-text: #5f3a22;
+    --flower-bg: #fff7f0;
+    --flower-glow: #f59a62;
+}
+
+.palash:hover {
+    translate: 0 -10px;
+    background: #ffefe2;
+    border-color: var(--flower-title);
+    box-shadow: 0 25px 60px rgba(194, 65, 12, 0.25);
+}
+
+.palash:hover::before {
+    background: var(--flower-title);
+}
+
+/* ==========================================================
+   FLOWER 2 - MADHABILATA (East India)
+   Fresh mint palette
+========================================================== */
+
+.madhabilata {
+    --flower-border: #93dcc0;
+    --flower-image-border: #c3f0df;
+    --flower-title: #1a7f5a;
+    --flower-text: #245546;
+    --flower-bg: #f2fcf8;
+    --flower-glow: #74d1ac;
+}
+
+.madhabilata:hover {
+    translate: 0 -10px;
+    background: #e6f8f0;
+    border-color: var(--flower-title);
+    box-shadow: 0 25px 60px rgba(26, 127, 90, 0.25);
+}
+
+.madhabilata:hover::before {
+    background: var(--flower-title);
+}
+
+/* ==========================================================
+   FLOWER 3 - SHIMUL (East India)
+   Crimson red palette
+========================================================== */
+
+.shimul {
+    --flower-border: #e58a8a;
+    --flower-image-border: #f4bcbc;
+    --flower-title: #b71c1c;
+    --flower-text: #5c2a2a;
+    --flower-bg: #fff5f4;
+    --flower-glow: #e57373;
+}
+
+.shimul:hover {
+    translate: 0 -10px;
+    background: #ffebe8;
+    border-color: var(--flower-title);
+    box-shadow: 0 25px 60px rgba(183, 28, 28, 0.24);
+}
+
+.shimul:hover::before {
+    background: var(--flower-title);
+}
+
+/* ==========================================================
+   FLOWER 4 - JACARANDA (South India)
+   Lavender / violet palette
+========================================================== */
+
+.jacaranda {
+    --flower-border: #aab4ee;
+    --flower-image-border: #d4daf8;
+    --flower-title: #4f46a5;
+    --flower-text: #3b3a66;
+    --flower-bg: #f7f8ff;
+    --flower-glow: #98a4ea;
+}
+
+.jacaranda:hover {
+    translate: 0 -10px;
+    background: #eef0ff;
+    border-color: var(--flower-title);
+    box-shadow: 0 25px 60px rgba(79, 70, 165, 0.26);
+}
+
+.jacaranda:hover::before {
+    background: var(--flower-title);
+}
+
+/* ==========================================================
+   FLOWER 5 - TABEBUIA (South India)
+   Rose pink palette
+========================================================== */
+
+.tabebuia {
+    --flower-border: #f2a5c7;
+    --flower-image-border: #f9d0e2;
+    --flower-title: #b8286e;
+    --flower-text: #5e2f47;
+    --flower-bg: #fff5fa;
+    --flower-glow: #ee8ab7;
+}
+
+.tabebuia:hover {
+    translate: 0 -10px;
+    background: #ffecf5;
+    border-color: var(--flower-title);
+    box-shadow: 0 25px 60px rgba(184, 40, 110, 0.24);
+}
+
+.tabebuia:hover::before {
+    background: var(--flower-title);
+}
+
+/* ==========================================================
+   FLOWER 6 - KANIKONNA (South India)
+   Golden yellow palette
+========================================================== */
+
+.kanikonna {
+    --flower-border: #f3d04a;
+    --flower-image-border: #fbe9a0;
+    --flower-title: #a16207;
+    --flower-text: #5f4b0f;
+    --flower-bg: #fffdea;
+    --flower-glow: #f7d84f;
+}
+
+.kanikonna:hover {
+    translate: 0 -10px;
+    background: #fff8cc;
+    border-color: var(--flower-title);
+    box-shadow: 0 25px 60px rgba(161, 98, 7, 0.27);
+}
+
+.kanikonna:hover::before {
+    background: var(--flower-title);
+}
+
+/* ==========================================================
+   GARDENING TIPS
+========================================================== */
+
+.garden-tips {
+    width: 90%;
+    max-width: 1300px;
+    margin: 100px auto;
+}
+
+.garden-tips h2 {
+    font-family: "Playfair Display", serif;
+    text-align: center;
+    font-size: 3rem;
+    color: #2f6b3a;
+    margin-bottom: 50px;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.tip {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 18px;
+    border-top: 5px solid #9ccb86;
+    box-shadow: 0 10px 30px rgba(47, 90, 58, 0.08);
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease,
+        background 0.35s ease;
+}
+
+.tip:hover {
+    transform: translateY(-8px);
+    border-top-color: #5f9e4d;
+    background: #f8fff4;
+    box-shadow: 0 20px 40px rgba(47, 90, 58, 0.15);
+}
+
+.tip h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.4rem;
+    color: #3f7d4a;
+    margin-bottom: 15px;
+}
+
+.tip p {
+    font-family: "Quicksand", sans-serif;
+    line-height: 1.7;
+    color: #4b6650;
+}
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+footer {
+    margin-top: 80px;
+    padding: 35px 20px;
+    text-align: center;
+    background: #2f6b3a;
+    color: #f6fbf1;
+    font-family: "Quicksand", sans-serif;
+}
+
+footer p {
+    margin: 0 0 15px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 14px;
+}
+
+footer h2 {
+    margin: 10px 0 15px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 25px;
+}
+
+/* Social Media */
+.footer-social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.footer-social-media a {
+    color: #f6fbf1;
+    text-decoration: none;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 500;
+    padding: 7px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 6px;
+    transition: 0.3s ease;
+}
+
+.footer-social-media a:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Navigation Links */
+.footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.footer-links a {
+    color: #f6fbf1;
+    text-decoration: none;
+    font-family: "Quicksand", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-social-media a:focus-visible,
+.footer-links a:focus-visible {
+    outline: 2px solid #f6fbf1;
+    outline-offset: 3px;
+}
+
+/* ==========================================================
+   SCROLL REVEAL
+   No opacity animation; transform only.
+   The hover lift above uses the separate `translate`
+   property so this animation never overrides it.
+========================================================== */
+
+@keyframes cardReveal {
+    from {
+        transform: translateY(80px) scale(0.97);
+    }
+
+    to {
+        transform: translateY(0) scale(1);
+    }
+}
+
+@supports (animation-timeline: view()) {
+    .flower-card {
+        animation: cardReveal linear both;
+        animation-timeline: view();
+        animation-range: entry 0% cover 35%;
+    }
+}
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 992px) {
+
+    .flower-card,
+    .flower-card.reverse {
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .flower-image {
+        width: 100%;
+    }
+
+    .flower-image img {
+        height: 380px;
+    }
+
+    .flower-content h2 {
+        font-size: 2.3rem;
+    }
+
+    .tips-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 768px) {
+
+    .spring-header h1 {
+        font-size: 3rem;
+    }
+
+    .spring-header p {
+        font-size: 1rem;
+    }
+
+    .spring-intro {
+        width: 92%;
+    }
+
+    .spring-intro p {
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+
+    .flower-card {
+        width: 94%;
+        padding: 25px;
+        margin: 45px auto;
+    }
+
+    .flower-image img {
+        height: 300px;
+    }
+
+    .flower-content h2 {
+        font-size: 2rem;
+    }
+
+    .flower-content p {
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+
+    .garden-tips h2 {
+        font-size: 2.3rem;
+    }
+
+    .tips-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================================
+   SMALL MOBILE
+========================================================== */
+
+@media (max-width: 480px) {
+
+    .spring-header {
+        padding: 50px 15px 30px;
+    }
+
+    .spring-header h1 {
+        font-size: 2.4rem;
+    }
+
+    .flower-card {
+        padding: 18px;
+        border-radius: 18px;
+    }
+
+    .flower-image img {
+        height: 230px;
+    }
+
+    .flower-content h2 {
+        font-size: 1.7rem;
+    }
+
+    .flower-content p {
+        font-size: 0.95rem;
+        line-height: 1.75;
+    }
+
+    .garden-tips h2 {
+        font-size: 1.9rem;
+    }
+
+    .tip {
+        padding: 22px;
+    }
+}
+
+/* ==========================================================
+   REDUCED MOTION
+   Keep the page calm for visitors who ask for less movement
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .flower-card {
+        animation: none;
+    }
+
+    .flower-card,
+    .flower-image img,
+    .flower-content h2,
+    .tip {
+        transition: none;
+    }
+
+    .flower-card:hover {
+        translate: none;
+    }
+
+    .flower-card:hover .flower-image img,
+    .flower-card:hover .flower-content h2,
+    .tip:hover {
+        transform: none;
+    }
+}
