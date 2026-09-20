@@ -114,7 +114,7 @@ The seasonal stylesheets are visually related but are not yet based on one share
 
 ## 6. Current Issues and Technical Risks
 
-These are observations from the current source files, not changes made as part of this documentation update.
+These notes describe the current source files and recent fixes.
 
 ### High priority
 
@@ -122,6 +122,7 @@ These are observations from the current source files, not changes made as part o
 2. **Some HTML is invalid or poorly formed.** Examples include custom attributes such as `1st`, `2nd`, and `3rd`, inline `<style>` blocks inside footers, a literal Markdown-style code fence in `autumn.html`, and content placed after `</body>` in `summer.html`.
 3. **The page structure is duplicated.** Footer markup and footer CSS are repeated across multiple pages, increasing the chance of inconsistent fixes.
 4. **Content labels and images sometimes disagree.** For example, some autumn cards use class names and image `alt` text from different flowers, and the winter page stylesheet is linked while the page still uses autumn-oriented class names.
+5. **GitHub Pages image paths are case-sensitive.** The Spring page previously referenced five files with lowercase names even though the repository files began with uppercase letters. Windows served those paths locally, but GitHub Pages returned 404 errors. The references in `spring.html` were corrected to match the exact filenames: `Madhabilata.jpg`, `Shimul.jpg`, `Jacaranda.jpg`, `Tabebuia.jpg`, and `Kanikonna.jpg`.
 
 ### Medium priority
 
@@ -142,7 +143,7 @@ These are observations from the current source files, not changes made as part o
 - Remove the literal code fence from `autumn.html`.
 - Place the `summer.html` footer inside the `<body>` element.
 - Correct mismatched titles, headings, class names, `alt` text, and flower descriptions.
-- Check every local image reference for case-sensitive path correctness.
+- Check every local image reference for case-sensitive path correctness. This check has been applied to the Spring page after a GitHub Pages deployment issue.
 
 ### Phase 2: Shared structure
 
@@ -192,4 +193,4 @@ http://localhost:8000/
 
 ## 9. Project Status
 
-The project is a visually expressive static prototype with substantial seasonal content and local assets. The strongest next step is structural cleanup: unify navigation, repair invalid markup, consolidate repeated footer and card styles, and add basic validation before expanding the content further.
+The project is a visually expressive static prototype with substantial seasonal content and local assets. The Spring image-loading issue on GitHub Pages has been fixed by matching image-reference casing to the committed filenames. The strongest next step is structural cleanup: unify navigation, repair invalid markup, consolidate repeated footer and card styles, and add basic validation before expanding the content further.
